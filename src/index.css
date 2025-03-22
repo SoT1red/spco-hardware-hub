@@ -25,7 +25,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 15 73% 50%;
+    --accent: 217 71% 45%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -106,7 +106,7 @@
   }
   
   .btn-primary {
-    @apply bg-accent-500 hover:bg-accent-600 text-white font-medium py-2.5 px-5 rounded-md inline-flex items-center gap-2 transition-custom;
+    @apply bg-spco-500 hover:bg-spco-600 text-white font-medium py-2.5 px-5 rounded-md inline-flex items-center gap-2 transition-custom;
   }
   
   .btn-outline {
@@ -137,4 +137,3 @@
   .fade-in-stagger > *:nth-child(5) { animation-delay: 0.5s; }
   .fade-in-stagger > *:nth-child(6) { animation-delay: 0.6s; }
 }
-

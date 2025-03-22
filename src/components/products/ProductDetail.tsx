@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Download, Share, Mail, Phone, FileText, ShoppingCart } from "lucide-react";
 import ContactForm from "../common/ContactForm";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface ProductDetailProps {
   product: Product;
@@ -18,7 +19,7 @@ const ProductDetail = ({ product, relatedProducts }: ProductDetailProps) => {
 
   const tabStyles = {
     base: "px-4 py-2 text-sm font-medium border-b-2 transition-custom",
-    active: "border-accent-500 text-accent-600",
+    active: "border-spco-500 text-spco-600",
     inactive: "border-transparent text-neutral-600 hover:text-neutral-900 hover:border-neutral-300"
   };
 
@@ -74,21 +75,24 @@ const ProductDetail = ({ product, relatedProducts }: ProductDetailProps) => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3">
-              <button
-                className="btn-primary"
+              <Button 
+                className="bg-spco-500 hover:bg-spco-600"
                 onClick={() => setShowInquiryForm(true)}
               >
-                <Mail className="h-4 w-4" />
-                Quick Inquiry
-              </button>
+                <Mail className="h-4 w-4 mr-2" />
+                Inquire Now
+              </Button>
               
-              <a 
-                href={`tel:+912212345678`} 
-                className="btn-outline"
+              <Button 
+                variant="outline" 
+                className="border-spco-600 text-spco-700 hover:bg-spco-50"
+                asChild
               >
-                <Phone className="h-4 w-4" />
-                Call to Order
-              </a>
+                <a href={`tel:+912212345678`}>
+                  <Phone className="h-4 w-4 mr-2" />
+                  Call to Order
+                </a>
+              </Button>
 
               <div className="flex gap-2 ml-auto">
                 <button className="p-2 rounded-md border border-neutral-200 text-neutral-700 hover:bg-neutral-50 transition-custom">

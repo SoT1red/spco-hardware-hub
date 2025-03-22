@@ -60,8 +60,8 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
         
         <div className="flex justify-between items-center pt-3 border-t border-neutral-100">
           <Link
-            to={`/products/${id}`}
-            className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium text-sm transition-custom group-hover:translate-x-1"
+            to={`/products/${category.toLowerCase().replace(/\s+/g, '-')}/${id}`}
+            className="inline-flex items-center text-spco-500 hover:text-spco-600 font-medium text-sm transition-custom group-hover:translate-x-1"
           >
             View Details
             <ArrowRight className="ml-1 h-4 w-4" />
