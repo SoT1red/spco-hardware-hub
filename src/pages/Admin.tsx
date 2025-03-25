@@ -5,14 +5,8 @@ import Footer from "@/components/layout/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import HeroEditor from "@/components/admin/HeroEditor";
-import PartnersEditor from "@/components/admin/PartnersEditor";
 import TestimonialsEditor from "@/components/admin/TestimonialsEditor";
-import ProductCategoriesEditor from "@/components/admin/ProductCategoriesEditor";
-import IndustriesEditor from "@/components/admin/IndustriesEditor";
-import ProductsEditor from "@/components/admin/ProductsEditor";
-import ContactInfoEditor from "@/components/admin/ContactInfoEditor";
-import FAQsEditor from "@/components/admin/FAQsEditor";
-import GeneralContentEditor from "@/components/admin/GeneralContentEditor";
+import { Alert } from "@/components/ui/alert";
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("hero");
@@ -86,52 +80,36 @@ const Admin = () => {
           </p>
 
           <Tabs defaultValue="hero" value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 mb-8">
+            <TabsList className="grid grid-cols-2 md:grid-cols-3 mb-8">
               <TabsTrigger value="hero">Hero</TabsTrigger>
-              <TabsTrigger value="partners">Partners</TabsTrigger>
               <TabsTrigger value="testimonials">Testimonials</TabsTrigger>
-              <TabsTrigger value="productCategories">Product Categories</TabsTrigger>
-              <TabsTrigger value="industries">Industries</TabsTrigger>
-              <TabsTrigger value="products">Products</TabsTrigger>
-              <TabsTrigger value="contactInfo">Contact Info</TabsTrigger>
-              <TabsTrigger value="faqs">FAQs</TabsTrigger>
-              <TabsTrigger value="general">General Content</TabsTrigger>
+              <TabsTrigger value="comingSoon">More (Coming Soon)</TabsTrigger>
             </TabsList>
 
             <TabsContent value="hero" className="bg-white p-6 rounded-lg shadow">
               <HeroEditor />
             </TabsContent>
             
-            <TabsContent value="partners" className="bg-white p-6 rounded-lg shadow">
-              <PartnersEditor />
-            </TabsContent>
-            
             <TabsContent value="testimonials" className="bg-white p-6 rounded-lg shadow">
               <TestimonialsEditor />
             </TabsContent>
             
-            <TabsContent value="productCategories" className="bg-white p-6 rounded-lg shadow">
-              <ProductCategoriesEditor />
-            </TabsContent>
-            
-            <TabsContent value="industries" className="bg-white p-6 rounded-lg shadow">
-              <IndustriesEditor />
-            </TabsContent>
-            
-            <TabsContent value="products" className="bg-white p-6 rounded-lg shadow">
-              <ProductsEditor />
-            </TabsContent>
-            
-            <TabsContent value="contactInfo" className="bg-white p-6 rounded-lg shadow">
-              <ContactInfoEditor />
-            </TabsContent>
-            
-            <TabsContent value="faqs" className="bg-white p-6 rounded-lg shadow">
-              <FAQsEditor />
-            </TabsContent>
-            
-            <TabsContent value="general" className="bg-white p-6 rounded-lg shadow">
-              <GeneralContentEditor />
+            <TabsContent value="comingSoon" className="bg-white p-6 rounded-lg shadow">
+              <div className="text-center py-8">
+                <h3 className="text-xl font-bold mb-4">More Editors Coming Soon</h3>
+                <p className="text-gray-600">
+                  We're working on adding editors for:
+                </p>
+                <ul className="list-disc list-inside mt-4 text-left max-w-md mx-auto">
+                  <li>Partners</li>
+                  <li>Product Categories</li>
+                  <li>Industries</li>
+                  <li>Products</li>
+                  <li>Contact Information</li>
+                  <li>FAQs</li>
+                  <li>General Content</li>
+                </ul>
+              </div>
             </TabsContent>
           </Tabs>
         </div>
