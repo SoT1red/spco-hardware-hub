@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import * as React from 'react';
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -21,10 +21,10 @@ export function BaseEditor<T>({
   onSave,
   renderForm
 }: BaseEditorProps<T>) {
-  const [editedData, setEditedData] = useState<T | undefined>(data);
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveError, setSaveError] = useState<string | null>(null);
-  const [saveSuccess, setSaveSuccess] = useState(false);
+  const [editedData, setEditedData] = React.useState<T | undefined>(data);
+  const [isSaving, setIsSaving] = React.useState(false);
+  const [saveError, setSaveError] = React.useState<string | null>(null);
+  const [saveSuccess, setSaveSuccess] = React.useState(false);
 
   // Update local state when data changes
   React.useEffect(() => {
