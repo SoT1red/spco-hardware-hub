@@ -14,7 +14,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
-import Admin from "./pages/Admin";
 import { useState } from "react";
 
 const App = () => {
@@ -37,7 +36,6 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
