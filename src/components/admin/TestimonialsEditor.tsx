@@ -14,18 +14,21 @@ const TestimonialsEditor = () => {
   const { data, isLoading, isError } = useTestimonials();
   const [selectedTestimonialId, setSelectedTestimonialId] = React.useState<string | null>(null);
   
+  // Type assertion for data to avoid TypeScript errors
+  const testimonials = data as TestimonialContent[] || [];
+  
   // Select the first testimonial by default when data loads
   React.useEffect(() => {
-    if (data && data.length > 0 && !selectedTestimonialId) {
-      setSelectedTestimonialId(data[0].id);
+    if (testimonials.length > 0 && !selectedTestimonialId) {
+      setSelectedTestimonialId(testimonials[0].id);
     }
-  }, [data, selectedTestimonialId]);
+  }, [testimonials, selectedTestimonialId]);
   
   // Find the currently selected testimonial
   const selectedTestimonial = React.useMemo(() => {
-    if (!data || !selectedTestimonialId) return null;
-    return data.find(item => item.id === selectedTestimonialId) || null;
-  }, [data, selectedTestimonialId]);
+    if (!testimonials.length || !selectedTestimonialId) return null;
+    return testimonials.find(item => item.id === selectedTestimonialId) || null;
+  }, [testimonials, selectedTestimonialId]);
 
   const updateTestimonial = async (updatedTestimonial: TestimonialContent) => {
     const { error } = await supabase
@@ -54,13 +57,13 @@ const TestimonialsEditor = () => {
     await mutation.mutateAsync(testimonialData);
   };
 
-  if (!selectedTestimonial && data && data.length > 0) {
+  if (!selectedTestimonial && testimonials.length > 0) {
     return <div className="p-8 text-center">Select a testimonial to edit</div>;
   }
 
   return (
     <div>
-      {data && data.length > 0 && (
+      {testimonials.length > 0 && (
         <div className="mb-6">
           <Label htmlFor="testimonial-select" className="mb-2 block">Select Testimonial</Label>
           <select 
@@ -69,7 +72,7 @@ const TestimonialsEditor = () => {
             value={selectedTestimonialId || ''}
             onChange={(e) => setSelectedTestimonialId(e.target.value)}
           >
-            {data.map((testimonial) => (
+            {testimonials.map((testimonial) => (
               <option key={testimonial.id} value={testimonial.id}>
                 {testimonial.author} - {testimonial.company}
               </option>
