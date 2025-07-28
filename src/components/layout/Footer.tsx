@@ -1,10 +1,7 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin, Facebook, Twitter } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-spco-800 text-white">
+  return <footer className="bg-spco-800 text-white">
       <div className="container mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
@@ -82,25 +79,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="text-white font-display font-medium text-lg mb-4">Newsletter</h3>
-            <p className="text-neutral-300 text-sm mb-4">
-              Stay updated with our latest products and industry news.
-            </p>
-            <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="bg-spco-700 border border-spco-600 rounded-md px-4 py-2 text-white placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-accent-500"
-              />
-              <button 
-                type="submit" 
-                className="bg-accent-500 hover:bg-accent-600 text-white py-2 px-4 rounded-md font-medium transition-custom"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          
         </div>
 
         <div className="border-t border-spco-700 mt-12 pt-8">
@@ -119,8 +98,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
