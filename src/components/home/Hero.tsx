@@ -29,9 +29,16 @@ const Hero = () => {
                 Enquire Now
                 <ArrowRight className="h-4 w-4 ml-1" />
               </Link>
-              <Link to="/products" className="btn-outline text-base">
+              <button 
+                onClick={() => {
+                  document.getElementById('product-categories')?.scrollIntoView({ 
+                    behavior: 'smooth' 
+                  });
+                }}
+                className="btn-outline text-base"
+              >
                 Browse Products
-              </Link>
+              </button>
             </div>
             
             <div className="mt-10 pt-6 border-t border-neutral-200">

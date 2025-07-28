@@ -52,7 +52,7 @@ const ProductCategories = () => {
   ];
 
   return (
-    <section className="py-20 bg-neutral-50">
+    <section id="product-categories" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-title">Our Product Categories</h2>
@@ -93,14 +93,14 @@ const ProductCategories = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        {/* <div className="text-center">
           <Button asChild size="lg">
             <Link to="/products">
               View All Products
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Search, Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import SearchBar from '../common/SearchBar';
-import spcoLogoLight from '@/assets/spco-logo-light.png';
+import spcoLogoBlack from '@/assets/SPCO-Logo-Black.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,17 +37,17 @@ const Header = () => {
         { name: 'Tools', href: '/products/tools' },
       ]
     },
-    { 
-      name: 'Industries', 
-      href: '/industries',
-      submenu: [
-        { name: 'Automotive', href: '/industries/automotive' },
-        { name: 'Heavy Machinery', href: '/industries/heavy-machinery' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' },
-        { name: 'Mining', href: '/industries/mining' },
-        { name: 'Agriculture', href: '/industries/agriculture' },
-      ]
-    },
+    // { 
+    //   name: 'Industries', 
+    //   href: '/industries',
+    //   submenu: [
+    //     { name: 'Automotive', href: '/industries/automotive' },
+    //     { name: 'Heavy Machinery', href: '/industries/heavy-machinery' },
+    //     { name: 'Manufacturing', href: '/industries/manufacturing' },
+    //     { name: 'Mining', href: '/industries/mining' },
+    //     { name: 'Agriculture', href: '/industries/agriculture' },
+    //   ]
+    // },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -63,7 +63,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={spcoLogoLight} alt="SPCO Hardware" className="h-8 w-auto" />
+            <img src={spcoLogoBlack} alt="SPCO" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -114,7 +114,7 @@ const Header = () => {
 
           {/* Search and Mobile Menu Toggle */}
           <div className="flex items-center">
-            <SearchBar className="hidden md:flex mr-4 w-[200px] lg:w-[250px]" />
+            {/* <SearchBar className="hidden md:flex mr-4 w-[200px] lg:w-[250px]" /> */}
             
             <Link 
               to="/contact" 
@@ -142,7 +142,7 @@ const Header = () => {
         style={{ top: '60px' }}
       >
         <div className="h-full overflow-y-auto px-4 py-6">
-          <SearchBar className="mb-6" />
+          {/* <SearchBar className="mb-6" /> */}
           
           <nav className="space-y-2">
             {navigation.map((item) => (

@@ -37,15 +37,15 @@ const NotFound = () => {
                 <Home className="h-4 w-4 mr-2" />
                 Back to Home
               </Link>
-              <Link to="/products" className="btn-outline">
+              {/* <Link to="/products" className="btn-outline">
                 Browse Products
-              </Link>
-              <Link to="/contact" className="bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-medium py-2.5 px-5 rounded-md inline-flex items-center gap-2 transition-custom">
+              </Link> */}
+              <Link to="/contact" className="btn-outline">
                 Contact Us
               </Link>
             </div>
             
-            <div className="mt-10 pt-8 border-t border-neutral-200">
+            {/* <div className="mt-10 pt-8 border-t border-neutral-200">
               <h3 className="text-lg font-medium text-spco-700 mb-4">
                 Looking for something specific?
               </h3>
@@ -67,7 +67,7 @@ const NotFound = () => {
                   Search
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>

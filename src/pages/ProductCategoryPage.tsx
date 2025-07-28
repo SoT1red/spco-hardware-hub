@@ -222,13 +222,13 @@ const ProductCategoryPage = () => {
                 {categoryInfo.description}
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="#products" className="btn-primary">
+                {/* <a href="#products" className="btn-primary">
                   Browse Products
                   <ArrowRight className="h-4 w-4 ml-1" />
-                </a>
-                <a href="/contact" className="bg-white text-spco-800 hover:bg-neutral-100 font-medium py-2.5 px-5 rounded-md inline-flex items-center gap-2 transition-custom">
+                </a> */}
+                <a href="/contact" className="btn-primary">
                   Get Technical Support
-                </a>
+                </a> 
               </div>
             </div>
           </div>
@@ -325,7 +325,7 @@ const ProductCategoryPage = () => {
           </div>
         </section>
 
-        {/* Products Section */}
+        {/* Products Section
         <section id="products" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -343,7 +343,7 @@ const ProductCategoryPage = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Section */}
         <section className="py-16 bg-spco-50">
@@ -357,16 +357,16 @@ const ProductCategoryPage = () => {
               </p>
               
               <div className="flex flex-col md:flex-row justify-center gap-4">
-                <a 
+                {/* <a 
                   href={`tel:+912212345678`} 
                   className="btn-primary"
                 >
                   <Phone className="h-4 w-4" />
                   Call Technical Support: +91 22 1234 5678
-                </a>
+                </a> */}
                 <a 
                   href="/contact" 
-                  className="btn-outline"
+                  className="btn-primary"
                 >
                   Request Technical Consultation
                 </a>

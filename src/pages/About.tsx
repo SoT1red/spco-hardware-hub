@@ -44,7 +44,7 @@ const About = () => {
             
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-5xl font-display font-semibold text-white mb-4">
-                About SPCO Hardware
+                About SPCO
               </h1>
               <p className="text-lg text-white/90 mb-6">
                 SPCO is a leading distributor of premium quality hardware components, serving diverse industries across India for over 25 years. We provide reliable products and expert technical support to keep your operations running smoothly.
@@ -285,7 +285,7 @@ const About = () => {
         </section>
 
         {/* Team (Placeholder) */}
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="section-title">Our Leadership Team</h2>
@@ -313,7 +313,7 @@ const About = () => {
                 </div>)}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-spco-800 to-spco-700 text-white">
@@ -324,10 +324,10 @@ const About = () => {
                 Experience the SPCO difference with our premium products and expert technical support.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/products" className="btn-primary">
+                {/* <a href="/products" className="btn-primary">
                   Browse Products
-                </a>
-                <a href="/contact" className="bg-white text-spco-800 hover:bg-neutral-100 font-medium py-2.5 px-5 rounded-md inline-flex items-center gap-2 transition-custom">
+                </a> */}
+                <a href="/contact" className="btn-primary">
                   Contact Us
                 </a>
               </div>
