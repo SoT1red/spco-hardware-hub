@@ -27,40 +27,49 @@ const ProductCard = ({ product, className }: ProductCardProps) => {
   const keySpecs = Object.entries(specifications).slice(0, 3);
 
   return (
-    <div className={cn("product-card", className)}>
-      <div className="product-card-image">
-        <img src={image} alt={name} />
-        <div className="product-card-category">
-          {category}
+    <div className={cn(
+      "bg-white rounded-lg border border-neutral-200 overflow-hidden shadow-sm hover:shadow-md transition-custom group",
+      className
+    )}>
+      <div className="relative h-48 overflow-hidden bg-neutral-100">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-contain object-center p-4 group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute top-3 left-3">
+          <span className="inline-flex items-center rounded-full bg-spco-50 px-2.5 py-0.5 text-xs font-medium text-spco-700">
+            {category}
+          </span>
         </div>
       </div>
       
-      <div className="product-card-content">
-        <h3 className="product-card-title">
+      <div className="p-5">
+        <h3 className="text-lg font-display font-semibold text-spco-800 mb-2 line-clamp-2">
           {name}
         </h3>
         
-        <div style={{ marginBottom: '1rem' }}>
+        <div className="space-y-1 mb-4">
           {keySpecs.map(([key, value]) => (
-            <div key={key} className="spco-flex" style={{ fontSize: '0.875rem', marginBottom: '0.25rem' }}>
-              <span style={{ color: 'var(--gray-600)', fontWeight: '500', minWidth: '120px' }}>{key}:</span>
-              <span style={{ color: 'var(--tertiary-color)' }}>{value}</span>
+            <div key={key} className="flex text-sm">
+              <span className="text-neutral-600 font-medium min-w-[120px]">{key}:</span>
+              <span className="text-neutral-800">{value}</span>
             </div>
           ))}
         </div>
         
-        <div className="spco-flex-between" style={{ paddingTop: '0.75rem', borderTop: '1px solid var(--gray-200)' }}>
+        <div className="flex justify-between items-center pt-3 border-t border-neutral-100">
           <Link
             to={`/products/${category.toLowerCase().replace(/\s+/g, '-')}/${id}`}
-            className="product-card-link"
+            className="inline-flex items-center text-spco-500 hover:text-spco-600 font-medium text-sm transition-custom group-hover:translate-x-1"
           >
             View Details
-            <ArrowRight style={{ height: '16px', width: '16px' }} />
+            <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
           
           <Link
             to={`/contact?product=${encodeURIComponent(name)}`}
-            style={{ fontSize: '0.875rem', fontWeight: '500', color: 'var(--primary-color)', textDecoration: 'none' }}
+            className="text-sm font-medium text-spco-600 hover:text-spco-700 transition-custom"
           >
             Enquire
           </Link>
