@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin, Facebook, Twitter } from "lucide-react";
+import spcoLogoDark from '@/assets/spco-logo-dark.png';
 const Footer = () => {
   return <footer className="bg-spco-800 text-white">
       <div className="container mx-auto px-4 pt-16 pb-8">
@@ -7,8 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <span className="text-xl font-display font-bold text-white">SPCO</span>
-              <span className="text-sm font-medium text-accent-500 ml-1">Hardware</span>
+              <img src={spcoLogoDark} alt="SPCO Hardware" className="h-8 w-auto" />
             </div>
             <p className="text-neutral-300 text-sm">
               Leading distributor of premium hardware components, providing quality bearings, lubricants and hardware supplies to industries across India.
