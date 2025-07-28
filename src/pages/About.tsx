@@ -1,46 +1,35 @@
-
 import { useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import { CheckCircle, MapPin, Award, Users, TrendingUp, BarChart3 } from "lucide-react";
-
 const About = () => {
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-
-  const timeline = [
-    {
-      year: "1995",
-      title: "Company Founded",
-      description: "SPCO was established in Mumbai as a small hardware distributor focused on the local market."
-    },
-    {
-      year: "2002",
-      title: "Expansion of Product Range",
-      description: "Expanded product portfolio to include a comprehensive range of bearings and related components."
-    },
-    {
-      year: "2008",
-      title: "Technical Support Team",
-      description: "Established a dedicated technical support team to provide specialized assistance to customers."
-    },
-    {
-      year: "2015",
-      title: "New Headquarters",
-      description: "Moved to a larger headquarters with expanded warehousing and logistics capabilities."
-    },
-    {
-      year: "2020",
-      title: "Digital Transformation",
-      description: "Implemented advanced digital systems for inventory management and customer service."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const timeline = [{
+    year: "1995",
+    title: "Company Founded",
+    description: "SPCO was established in Mumbai as a small hardware distributor focused on the local market."
+  }, {
+    year: "2002",
+    title: "Expansion of Product Range",
+    description: "Expanded product portfolio to include a comprehensive range of bearings and related components."
+  }, {
+    year: "2008",
+    title: "Technical Support Team",
+    description: "Established a dedicated technical support team to provide specialized assistance to customers."
+  }, {
+    year: "2015",
+    title: "New Headquarters",
+    description: "Moved to a larger headquarters with expanded warehousing and logistics capabilities."
+  }, {
+    year: "2020",
+    title: "Digital Transformation",
+    description: "Implemented advanced digital systems for inventory management and customer service."
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-24">
         {/* Hero Section */}
@@ -49,10 +38,9 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-spco-900 to-spco-800/70"></div>
           
           <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
-            <Breadcrumb 
-              items={[{ label: "About" }]} 
-              className="mb-6 text-white/80" 
-            />
+            <Breadcrumb items={[{
+            label: "About"
+          }]} className="mb-6 text-white/80" />
             
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-5xl font-display font-semibold text-white mb-4">
@@ -89,11 +77,7 @@ const About = () => {
               
               <div className="relative">
                 <div className="relative rounded-lg overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?q=80&w=2574&auto=format&fit=crop" 
-                    alt="SPCO Headquarters" 
-                    className="w-full h-auto"
-                  />
+                  <img src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?q=80&w=2574&auto=format&fit=crop" alt="SPCO Headquarters" className="w-full h-auto" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg border border-neutral-100">
                   <div className="flex items-center gap-3">
@@ -191,8 +175,7 @@ const About = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-neutral-200"></div>
               
               <div className="space-y-12">
-                {timeline.map((item, index) => (
-                  <div key={index} className="relative">
+                {timeline.map((item, index) => <div key={index} className="relative">
                     {/* Timeline dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-accent-500 border-4 border-white"></div>
                     
@@ -212,8 +195,7 @@ const About = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -285,32 +267,16 @@ const About = () => {
               <div className="order-1 lg:order-2">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-lg overflow-hidden shadow-sm">
-                    <img 
-                      src="https://images.unsplash.com/photo-1630569470960-ec1e8c073b13?q=80&w=2069&auto=format&fit=crop" 
-                      alt="SPCO Warehouse" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
+                    <img src="https://images.unsplash.com/photo-1630569470960-ec1e8c073b13?q=80&w=2069&auto=format&fit=crop" alt="SPCO Warehouse" className="w-full h-full object-cover aspect-square" />
                   </div>
                   <div className="rounded-lg overflow-hidden shadow-sm">
-                    <img 
-                      src="https://images.unsplash.com/photo-1556221430-4dd6d1b1f9c1?q=80&w=2070&auto=format&fit=crop" 
-                      alt="Quality Control Lab" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
+                    <img src="https://images.unsplash.com/photo-1556221430-4dd6d1b1f9c1?q=80&w=2070&auto=format&fit=crop" alt="Quality Control Lab" className="w-full h-full object-cover aspect-square" />
                   </div>
                   <div className="rounded-lg overflow-hidden shadow-sm">
-                    <img 
-                      src="https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=2070&auto=format&fit=crop" 
-                      alt="Technical Support" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
+                    <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=2070&auto=format&fit=crop" alt="Technical Support" className="w-full h-full object-cover aspect-square" />
                   </div>
                   <div className="rounded-lg overflow-hidden shadow-sm">
-                    <img 
-                      src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" 
-                      alt="Distribution" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Distribution" className="w-full h-full object-cover aspect-square" />
                   </div>
                 </div>
               </div>
@@ -329,14 +295,9 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm border border-neutral-100 card-hover">
+              {[1, 2, 3, 4].map(i => <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm border border-neutral-100 card-hover">
                   <div className="aspect-square bg-neutral-100">
-                    <img 
-                      src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'men' : 'women'}/${i + 10}.jpg`} 
-                      alt="Team member" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'men' : 'women'}/${i + 10}.jpg`} alt="Team member" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-lg font-display font-semibold text-spco-700">
@@ -346,17 +307,10 @@ const About = () => {
                       {i === 1 ? 'CEO & Founder' : i === 2 ? 'Technical Director' : i === 3 ? 'Operations Manager' : 'Sales Director'}
                     </p>
                     <p className="text-neutral-600 text-sm">
-                      {i === 1 
-                        ? 'Raj has 25+ years of experience in the hardware industry and founded SPCO in 1995.' 
-                        : i === 2 
-                        ? 'Priya leads our technical team with expertise in bearing applications across industries.' 
-                        : i === 3 
-                        ? 'Vikram ensures efficient operations and logistics for timely product delivery.' 
-                        : 'Anjali develops strategic relationships with customers and partners.'}
+                      {i === 1 ? 'Raj has 25+ years of experience in the hardware industry and founded SPCO in 1995.' : i === 2 ? 'Priya leads our technical team with expertise in bearing applications across industries.' : i === 3 ? 'Vikram ensures efficient operations and logistics for timely product delivery.' : 'Anjali develops strategic relationships with customers and partners.'}
                     </p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -365,7 +319,7 @@ const About = () => {
         <section className="py-16 bg-gradient-to-r from-spco-800 to-spco-700 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-display font-semibold mb-4">Ready to Work with SPCO?</h2>
+              <h2 className="text-3xl font-display font-semibold mb-4 text-stone-50">Ready to Work with SPCO?</h2>
               <p className="text-lg text-white/90 mb-8">
                 Experience the SPCO difference with our premium products and expert technical support.
               </p>
@@ -382,8 +336,6 @@ const About = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
