@@ -141,14 +141,15 @@ const ProductCategoryPage = () => {
     setLoading(true);
     
     if (category) {
-      const categoryProducts = getProductsByCategory(category);
       const categoryData = categoriesData[category];
       
-      if (categoryData && categoryProducts.length > 0) {
+      if (categoryData) {
+        // Use the actual category name from categoryData to get products
+        const categoryProducts = getProductsByCategory(categoryData.name);
         setProducts(categoryProducts);
         setCategoryInfo(categoryData);
       } else {
-        // If no products found for category, redirect to main products page
+        // If no category data found, redirect to main products page
         navigate("/products", { replace: true });
       }
     }
