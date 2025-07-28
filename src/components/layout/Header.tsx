@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Search, Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import SearchBar from '../common/SearchBar';
-import spcoLogoLight from '@/assets/spco-logo-light.png';
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,7 +63,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={spcoLogoLight} alt="SPCO Hardware" className="h-8 w-auto" />
+            <img src="/lovable-uploads/239baabd-e706-4c6b-9193-d23d74104254.png" alt="SPCO Hardware" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
