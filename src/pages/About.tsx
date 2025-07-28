@@ -29,9 +29,9 @@ const About = () => {
     title: "Digital Transformation",
     description: "Implemented advanced digital systems for inventory management and customer service."
   }];
-  return <div className="min-h-screen flex flex-col">
+  return <div className="page-about">
       <Header />
-      <main className="flex-grow pt-24">
+      <main className="main-content">
         {/* Hero Section */}
         <section className="relative bg-spco-800 text-white">
           <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1507646871303-331b8f659227?q=80&w=2874&auto=format&fit=crop')] bg-cover bg-center"></div>

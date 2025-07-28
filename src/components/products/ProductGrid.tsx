@@ -29,64 +29,67 @@ const ProductGrid = ({ products, className }: ProductGridProps) => {
 
   return (
     <div className={className}>
-      <div className="flex justify-between items-center mb-6">
-        <div className="text-sm text-neutral-600">
+      <div className="spco-flex-between" style={{ marginBottom: '1.5rem' }}>
+        <div style={{ fontSize: '0.875rem', color: 'var(--gray-600)' }}>
           {products.length} products
         </div>
 
-        <div className="flex items-center space-x-1">
-          <span className="text-sm text-neutral-600 mr-2">Sort by:</span>
+        <div className="spco-flex" style={{ alignItems: 'center', gap: '0.25rem' }}>
+          <span style={{ fontSize: '0.875rem', color: 'var(--gray-600)', marginRight: '0.5rem' }}>Sort by:</span>
           <button
             className={cn(
-              "inline-flex items-center rounded-md px-3 py-1.5 text-sm transition-custom",
+              "spco-btn",
               sortOption === "recent"
-                ? "bg-spco-50 text-spco-800"
-                : "text-neutral-600 hover:bg-neutral-50"
+                ? "spco-btn-secondary"
+                : "spco-btn-outline"
             )}
+            style={{ padding: '0.375rem 0.75rem', fontSize: '0.875rem' }}
             onClick={() => setSortOption("recent")}
           >
-            <ArrowUpDown className="mr-1 h-3.5 w-3.5" />
+            <ArrowUpDown style={{ marginRight: '0.25rem', height: '14px', width: '14px' }} />
             Recent
           </button>
           <button
             className={cn(
-              "inline-flex items-center rounded-md px-3 py-1.5 text-sm transition-custom",
+              "spco-btn",
               sortOption === "name_asc"
-                ? "bg-spco-50 text-spco-800"
-                : "text-neutral-600 hover:bg-neutral-50"
+                ? "spco-btn-secondary"
+                : "spco-btn-outline"
             )}
+            style={{ padding: '0.375rem 0.75rem', fontSize: '0.875rem' }}
             onClick={() => setSortOption("name_asc")}
           >
-            <ArrowDownAZ className="mr-1 h-3.5 w-3.5" />
+            <ArrowDownAZ style={{ marginRight: '0.25rem', height: '14px', width: '14px' }} />
             A-Z
           </button>
           <button
             className={cn(
-              "inline-flex items-center rounded-md px-3 py-1.5 text-sm transition-custom",
+              "spco-btn",
               sortOption === "name_desc"
-                ? "bg-spco-50 text-spco-800"
-                : "text-neutral-600 hover:bg-neutral-50"
+                ? "spco-btn-secondary"
+                : "spco-btn-outline"
             )}
+            style={{ padding: '0.375rem 0.75rem', fontSize: '0.875rem' }}
             onClick={() => setSortOption("name_desc")}
           >
-            <ArrowDownZA className="mr-1 h-3.5 w-3.5" />
+            <ArrowDownZA style={{ marginRight: '0.25rem', height: '14px', width: '14px' }} />
             Z-A
           </button>
         </div>
       </div>
 
       {sortedProducts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="products-grid">
           {sortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       ) : (
-        <div className="text-center py-12 bg-neutral-50 rounded-lg">
-          <h3 className="text-lg font-medium text-neutral-800 mb-2">
+        <div className="spco-card" style={{ textAlign: 'center', padding: '3rem', backgroundColor: 'var(--gray-50)' }}>
+          <h3 style={{ fontSize: '1.125rem', fontWeight: '500', color: 'var(--tertiary-color)', marginBottom: '0.5rem' }}>
             No products found
           </h3>
-          <p className="text-neutral-600">
+          <p style={{ color: 'var(--gray-600)' }}>
             Try adjusting your filters or search criteria.
           </p>
         </div>

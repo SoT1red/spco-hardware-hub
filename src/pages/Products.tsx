@@ -97,14 +97,14 @@ const Products = () => {
     : [{ label: "Products" }];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="page-products">
       <Header />
-      <main className="flex-grow pt-24">
-        <div className="bg-neutral-50 border-b border-neutral-200">
-          <div className="container mx-auto px-4 py-8">
-            <Breadcrumb items={breadcrumbItems} className="mb-4" />
-            <h1 className="text-3xl md:text-4xl font-display font-semibold text-spco-800 mb-2">{pageTitle}</h1>
-            <p className="text-neutral-600 max-w-3xl">
+      <main className="main-content">
+        <div className="products-header">
+          <div className="spco-container">
+            <Breadcrumb items={breadcrumbItems} className="products-breadcrumb" />
+            <h1 className="products-title">{pageTitle}</h1>
+            <p className="products-description">
               {category 
                 ? `Explore our range of high-quality ${pageTitle.toLowerCase()} for various industrial applications.`
                 : "Browse our comprehensive range of premium hardware products for all your industrial needs."
@@ -113,20 +113,22 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-10">
-          <div className="flex flex-col lg:flex-row gap-10">
-            {/* Filters Sidebar */}
-            <div className="w-full lg:w-1/4">
-              <ProductFilters 
-                filterGroups={filterGroups}
-                activeFilters={activeFilters}
-                setActiveFilters={setActiveFilters}
-              />
-            </div>
-            
-            {/* Product Grid */}
-            <div className="w-full lg:w-3/4">
-              <ProductGrid products={filteredProducts} />
+        <div className="products-content">
+          <div className="spco-container">
+            <div className="products-layout">
+              {/* Filters Sidebar */}
+              <div className="products-filters">
+                <ProductFilters 
+                  filterGroups={filterGroups}
+                  activeFilters={activeFilters}
+                  setActiveFilters={setActiveFilters}
+                />
+              </div>
+              
+              {/* Product Grid */}
+              <div className="products-grid-container">
+                <ProductGrid products={filteredProducts} />
+              </div>
             </div>
           </div>
         </div>
