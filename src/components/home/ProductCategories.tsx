@@ -2,13 +2,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import ballbearings from '@/assets/ballbearings.jpg';
+import rollerbearings from '@/assets/rollerbearings.jpg';
+import cogelsa_lubricants from '@/assets/cogelsa_lubricants.png';
+import seals from '@/assets/seals.webp';
+import tools from '@/assets/tools.jpg';
 
 interface Category {
   id: string;
   name: string;
   description: string;
-  image: string;
+  src: string;
   link: string;
 }
 
@@ -18,35 +22,35 @@ const ProductCategories = () => {
       id: "ball-bearings",
       name: "Ball Bearings",
       description: "Precision engineered ball bearings for reduced friction and smooth operation.",
-      image: "https://images.unsplash.com/photo-1626252652871-1ad083beca5a?q=80&w=2070&auto=format&fit=crop",
+      src: ballbearings,
       link: "/products/ball-bearings"
     },
     {
       id: "roller-bearings",
       name: "Roller Bearings",
       description: "Heavy-duty roller bearings designed for superior load capacity and durability.",
-      image: "https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?q=80&w=2070&auto=format&fit=crop",
+      src: rollerbearings,
       link: "/products/roller-bearings"
     },
     {
       id: "lubricants",
       name: "Lubricants",
       description: "High-performance lubricants that extend component life and reduce maintenance.",
-      image: "https://images.unsplash.com/photo-1635372722656-389f87a941db?q=80&w=1974&auto=format&fit=crop",
+      src: cogelsa_lubricants,
       link: "/products/lubricants"
     },
     {
       id: "seals",
       name: "Seals",
       description: "Industrial seals that prevent contamination and retain lubricant in critical systems.",
-      image: "https://images.unsplash.com/photo-1521582738928-ba26c0ab41d6?q=80&w=2070&auto=format&fit=crop",
+      src: seals,
       link: "/products/seals"
     },
     {
       id: "tools",
       name: "Tools",
       description: "Specialized tools for proper installation and maintenance of bearings and related components.",
-      image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=2070&auto=format&fit=crop",
+      src: tools,
       link: "/products/tools"
     }
   ];
@@ -67,7 +71,7 @@ const ProductCategories = () => {
               <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 h-full">
                 <div className="h-48 overflow-hidden bg-neutral-100">
                   <img 
-                    src={category.image} 
+                    src={category.src} 
                     alt={category.name} 
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />

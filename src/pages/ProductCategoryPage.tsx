@@ -8,6 +8,11 @@ import ProductGrid from "@/components/products/ProductGrid";
 import { Product } from "@/components/products/ProductCard";
 import { getProductsByCategory } from "@/lib/data";
 import { ArrowRight, CheckCircle, Phone, Cog, Shield, Award } from "lucide-react";
+import ballbearings from '@/assets/ballbearings.jpg';
+import rollerbearings from '@/assets/rollerbearings.jpg';
+import cogelsa_lubricants from '@/assets/cogelsa_lubricants.png';
+import seals from '@/assets/seals.webp';
+import tools from '@/assets/tools.jpg';
 
 interface CategoryInfo {
   id: string;
@@ -33,7 +38,7 @@ const ProductCategoryPage = () => {
       name: "Ball Bearings",
       description: "Precision engineered ball bearings for reduced friction and smooth operation in diverse industrial applications.",
       detailedDescription: "Our ball bearings are manufactured to the highest precision standards, featuring superior steel quality and advanced heat treatment processes. Designed for applications requiring low friction, high-speed capability, and reliable performance across various operating conditions.",
-      image: "https://images.unsplash.com/photo-1626252652871-1ad083beca5a?q=80&w=2070&auto=format&fit=crop",
+      image: ballbearings,
       features: [
         "Low friction and noise levels",
         "High-speed capability up to 32,000 RPM",
@@ -54,7 +59,7 @@ const ProductCategoryPage = () => {
       name: "Roller Bearings",
       description: "Heavy-duty roller bearings designed for superior load capacity and durability in demanding industrial environments.",
       detailedDescription: "Our roller bearing range includes cylindrical, tapered, spherical, and needle roller bearings, each engineered for specific load requirements and operating conditions. These bearings excel in high-load applications where maximum load capacity and extended service life are critical.",
-      image: "https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?q=80&w=2070&auto=format&fit=crop",
+      image: rollerbearings,
       features: [
         "Exceptional load carrying capacity",
         "Self-aligning capabilities",
@@ -75,7 +80,7 @@ const ProductCategoryPage = () => {
       name: "Lubricants",
       description: "High-performance lubricants that extend component life and reduce maintenance costs.",
       detailedDescription: "Our comprehensive lubricant portfolio includes greases, oils, and specialty lubricants formulated for specific applications and operating conditions. Each product is designed to provide optimal protection, reduce wear, and extend equipment life while minimizing maintenance requirements.",
-      image: "https://images.unsplash.com/photo-1635372722656-389f87a941db?q=80&w=1974&auto=format&fit=crop",
+      image: cogelsa_lubricants,
       features: [
         "Extended relubrication intervals",
         "Wide temperature operating range",
@@ -96,7 +101,7 @@ const ProductCategoryPage = () => {
       name: "Seals",
       description: "Industrial seals that prevent contamination and retain lubricant in critical systems.",
       detailedDescription: "Our seal solutions provide reliable protection for bearings and mechanical systems against contamination while retaining lubricants. Available in various materials and configurations to meet specific application requirements and operating environments.",
-      image: "https://images.unsplash.com/photo-1521582738928-ba26c0ab41d6?q=80&w=2070&auto=format&fit=crop",
+      image: seals,
       features: [
         "Superior sealing performance",
         "Chemical and temperature resistance",
@@ -117,7 +122,7 @@ const ProductCategoryPage = () => {
       name: "Tools",
       description: "Specialized tools for proper installation and maintenance of bearings and related components.",
       detailedDescription: "Our professional tool range ensures proper installation, removal, and maintenance of bearings and mechanical components. These precision-engineered tools help prevent damage during service operations and ensure optimal performance of installed components.",
-      image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=2070&auto=format&fit=crop",
+      image: tools,
       features: [
         "Precision-engineered construction",
         "Prevents component damage",

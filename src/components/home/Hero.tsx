@@ -1,5 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from '@/assets/ballbearings.jpg';
+import tataLogo from '@/assets/tata.png';
+import mahindraLogo from '@/assets/mahindra.jpg';
+import lntLogo from '@/assets/L&T logo.png';
+import bhelLogo from '@/assets/bhel.avif';
 const Hero = () => {
   return <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -39,10 +44,10 @@ const Hero = () => {
             <div className="mt-10 pt-6 border-t border-neutral-200">
               <p className="text-sm text-neutral-500 mb-3">Trusted by industry leaders</p>
               <div className="flex flex-wrap gap-6 items-center opacity-70">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tata_logo.svg" alt="Tata" className="h-6 object-contain" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Mahindra_%26_Mahindra-Logo.svg" alt="Mahindra" className="h-6 object-contain" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Larsen_%26_Toubro_Logo.svg" alt="L&T" className="h-7 object-contain" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Bharat_Heavy_Electricals_Limited_Logo.svg" alt="BHEL" className="h-5 object-contain" />
+                <img src={tataLogo} alt="Tata" className="h-6 object-contain" />
+                <img src={mahindraLogo} alt="Mahindra" className="h-6 object-contain" />
+                <img src={lntLogo} alt="L&T" className="h-7 object-contain" />
+                <img src={bhelLogo} alt="BHEL" className="h-5 object-contain" />
               </div>
             </div>
           </div>
@@ -50,7 +55,7 @@ const Hero = () => {
           <div className="relative lg:h-[500px]">
             <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl animate-zoom-in lg:absolute lg:top-0 lg:right-0">
               <div className="absolute inset-0 bg-gradient-to-tr from-spco-900/50 to-spco-800/20 z-10"></div>
-              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2670&auto=format&fit=crop" alt="Industrial bearings" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+              <img src={heroImage} alt="Industrial bearings" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
         </div>
