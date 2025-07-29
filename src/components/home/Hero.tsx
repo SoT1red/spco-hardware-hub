@@ -19,9 +19,7 @@ const Hero = () => {
                 <span className="block">Where Precision</span>
                 <span className="block text-spco-600">Meets Performance</span>
               </h1>
-              <p className="mt-6 text-lg text-neutral-600 max-w-lg">
-                SPCO provides premium quality bearings, lubricants, and hardware components that keep your machinery running at peak performance.
-              </p>
+              <p className="mt-6 text-lg text-neutral-600 max-w-lg">Supply Chain Excellence for Highly Engineered and Long Lead Time Products.</p>
             </div>
             
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -29,14 +27,11 @@ const Hero = () => {
                 Enquire Now
                 <ArrowRight className="h-4 w-4 ml-1" />
               </Link>
-              <button 
-                onClick={() => {
-                  document.getElementById('product-categories')?.scrollIntoView({ 
-                    behavior: 'smooth' 
-                  });
-                }}
-                className="btn-outline text-base"
-              >
+              <button onClick={() => {
+              document.getElementById('product-categories')?.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }} className="btn-outline text-base">
                 Browse Products
               </button>
             </div>
